@@ -38,12 +38,10 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 
----
-layout: default
----
-
-<div class="blog-index">  
-  {% assign post = site.posts.first %}
-  {% assign content = post.content %}
-  {% include post_detail.html %}
-</div>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="https://kevin-thomas92.github.io/2020/02/24/new-beginnings">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
